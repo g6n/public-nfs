@@ -7,5 +7,6 @@ RUN apk update \
 VOLUME /media/storage
 EXPOSE 111/udp 2049/tcp
 ADD start-nfs.sh /start-nfs.sh
+ADD nfs /etc/conf.d/nfs
 RUN chmod +x /start-nfs.sh
 CMD [ "/start-nfs.sh" ]
